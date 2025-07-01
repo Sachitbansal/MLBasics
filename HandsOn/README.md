@@ -264,4 +264,27 @@ print("\nConfusion Matrix:\n", confusion_matrix(y_test, y_pred))
 - `confusion_matrix(y_test, y_pred)`: Displays a matrix of actual vs. predicted labels.
 - **Use:** Measures and summarizes the performance of the classifier.
 
+**Classification Report Metrics:**
+- **Precision:** Correct positive predictions / all predicted positives
+- **Recall:** Correct positive predictions / all actual positives
+- **F1-score:** Harmonic mean of precision and recall
+
+**How to Read the Confusion Matrix:**
+- The confusion matrix shows how many predictions were correct or incorrect for each class.
+- **Rows** represent the actual classes, **columns** represent the predicted classes.
+- The diagonal elements (top-left to bottom-right) show correct predictions; off-diagonal elements show misclassifications.
+
+**Example:**
+Suppose the confusion matrix for a 3-class problem is:
+
+|     | Pred 0 | Pred 1 | Pred 2 |
+|-----|--------|--------|--------|
+| **Actual 0** |   5    |   0    |   0    |
+| **Actual 1** |   1    |   4    |   0    |
+| **Actual 2** |   0    |   0    |   6    |
+
+- Here, 5 samples of class 0 were correctly predicted as 0, 4 of class 1 as 1, and 6 of class 2 as 2.
+- 1 sample of class 1 was incorrectly predicted as class 0.
+- The higher the diagonal values, the better the model's performance.
+
 ---
